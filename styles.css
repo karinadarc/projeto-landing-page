@@ -60,52 +60,42 @@ nav a {
 
 
 #abertura {
-    width: 98vw;
+    display: flex;
+    justify-content: space-between;
     height: 90vh;
-    justify-items: center;
-    display: grid;
-    grid-template-columns: 1.3fr 1fr;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: "entregador primeiro-texto "
-        "entregador primeiro-texto"
-        "entregador figura-entregador";
+}
 
-
+.primeira-parte {
+    width: 50%;
 }
 
 
-
 #imagem1-abertura {
-    height: 40vw;
+    height: 41vw;
     width: 100%;
-    grid-area: entregador;
+}
+
+.segunda-parte {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+    width: 50%;
+
 }
 
 #frase-de-abertura {
     padding: 2vh;
-    grid-area: primeiro-texto;
-
-}
-
-#frase-de-abertura p {
-    display: grid;
-    font-size: 22px;
-    text-align: center;
-    align-items: center;
-    margin: 4%;
-    letter-spacing: 3px;
     color: rgb(255, 255, 255);
-
-
-
+    font-size: clamp(0.5rem, 0.8vw + 1rem, 2.2rem);
+    text-align: center;
 }
+
 
 #figurinha-entregador {
-    align-self: center;
     align-items: center;
     width: 19%;
     padding-top: 5%;
-    grid-area: figura-entregador;
 
 }
 
@@ -122,9 +112,6 @@ nav a {
     color: white;
     height: 4vw;
     text-align: center;
-    margin-bottom: 1%;
-
-
 }
 
 #btn-app:hover {
@@ -265,6 +252,7 @@ nav a {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(2, 1fr);
     justify-items: center;
+
     padding-top: 5%;
     background-image: linear-gradient(to right, white, white, var(--primeira));
     grid-template-areas: " restaurante mercado farmacia lanches pet-shop";
@@ -273,11 +261,12 @@ nav a {
 
 #servicos figure {
     justify-items: center;
-    height: 40vh;
-    width: 15vw;
+    height: 38vh;
+    width: 14vw;
     animation: transicao2 10s ease-in-out infinite;
     border: 2px solid var(--primeira);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    font-size: 1.8em;
 
 
 }
@@ -302,8 +291,8 @@ nav a {
 
 
 .imagens-servicos {
-    height: 60%;
-    width: 60%;
+    height: 55%;
+    width: 55%;
     font-size: 5rem;
 
 }
@@ -438,7 +427,7 @@ nav a {
 #frase-oferta {
     color: white;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     text-align: center;
     padding-top: 2%;
     animation: transicao3 10s ease-in-out infinite;
@@ -617,6 +606,8 @@ legend {
 
 }
 
+/* --------------------------------------------------------------------------------------------- */
+
 footer {
     display: flex;
     align-items: center;
@@ -650,7 +641,7 @@ footer {
 .redes-sociais img {
     width: 5vh;
     height: 5vh;
-   
+
 
 }
 
@@ -660,7 +651,7 @@ footer {
     width: 20vw;
 }
 
-
+/* -------------------------------------------TABLET------------------------------------------------- */
 
 @media screen and (max-device-width : 800px) {
     #cor-de-fundo {
@@ -692,32 +683,43 @@ footer {
     }
 
     #abertura {
-        width: 100vw;
-        height: 120vh;
-        justify-items: center;
-        grid-template-columns: 100%;
-        grid-template-areas: "entregador" "primeiro-texto" "primeiro-texto";
+        display: flex;
+        justify-content: space-between;
+        height: 100vh;
+       flex-wrap:wrap-reverse;
+    }
+    .primeira-parte {
+        width: 25%;
     }
 
     #imagem1-abertura {
-        height: 40vh;
-        width: 50vw;
+        padding-top: 15%;
+        height: 58vh;
+        width: 58vw;
+    }
+
+    .segunda-parte {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        display: flex;
+        width: 50%;
+    
     }
 
 
-    #frase-de-abertura p {
-        display: grid;
-        font-size: 1.5rem;
-        text-align: center;
-        align-items: center;
-        letter-spacing: 3px;
+    #frase-de-abertura {
+        padding: 2vh;
         color: rgb(255, 255, 255);
-        min-width: 30vw;
+        font-size: clamp(0.4rem, 0.2vw + 1rem, 2.2rem);
+        text-align: center;
     }
 
     #btn-app {
         display: flex;
         height: 5vh;
+        font-size: clamp(0.2rem, 0.09vw + 1rem, 2rem);
+    
 
     }
 
@@ -837,28 +839,51 @@ footer {
 
     #promocoes {
         display: grid;
+        padding-left: 1%;
+        padding-right: 1%;
+        row-gap: 5%;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: repeat (3, 1fr);
-        padding-bottom: 8%;
         padding-top: 10%;
-        height: 100vh;
+        height: 110vh;
         text-align: center;
         background-color: white;
         grid-template-areas: "item1 item2 item3" "frase-oferta frase-oferta frase-oferta" "item4 item5 item6";
 
     }
+    #frase-oferta {
+        color: white;
+        text-align: center;
+        font-size: 1.2rem;
+        text-align: center;
+        padding-bottom: 5%;
+    }
 
     .itens-promocao {
-        height: 18vh;
+        height: 20vh;
         width: 18vw;
     }
 
+
+    #frase-4food {
+        text-align: center;
+        align-items: center;
+        font-size: 1.2rem;
+        padding-top: 4%;
+        row-gap: 10%;
+        background-color: white;
+        color: #9C2C77;
+    }
+
     #categorias {
+       
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas: "registre" "entregador" "trabalhe-conosco";
 
     }
+
+   
 
 
     .box {
@@ -882,8 +907,8 @@ footer {
     #logo-footer img {
         /*  */
         justify-items: start;
-        width: 10vw;
-        height: 10vh;
+        width: 13vw;
+        height: 13vh;
         /* display: none; */
 
     }
@@ -907,8 +932,8 @@ footer {
     }
 
     .redes-sociais img {
-        width: 5vw;
-        height: 5vh;
+        width: 6vw;
+        height: 6vh;
 
     }
 
@@ -921,3 +946,6 @@ footer {
 
 
 }
+
+/* CELULARES  */
+

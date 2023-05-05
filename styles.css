@@ -130,7 +130,7 @@ nav a {
     animation: transicao1 10s ease-in-out infinite;
     border-radius: 100% 100% 100% 100% / 100% 100% 100% 100%;
     /* height: 58vh; */
-    width: 50vw;
+    width: 70vw;
     z-index: 5;
 
 }
@@ -262,11 +262,12 @@ nav a {
 #servicos figure {
     justify-items: center;
     height: 38vh;
-    width: 14vw;
+    width: 13vw;
     animation: transicao2 10s ease-in-out infinite;
     border: 2px solid var(--primeira);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    font-size: 1.8em;
+    font-size: clamp(0.1rem, 0.5vw + 0.7rem, 1.4rem);
+    color: white;
 
 
 }
@@ -426,7 +427,6 @@ nav a {
 
 #frase-oferta {
     color: white;
-    text-align: center;
     font-size: 1.7rem;
     text-align: center;
     padding-top: 2%;
@@ -948,4 +948,317 @@ footer {
 }
 
 /* CELULARES  */
+
+@media screen and (max-device-width : 480px) {
+    #cor-de-fundo {
+        background-image: linear-gradient(to right, var(--primeira), var(--primeira), var(--segunda))
+    }
+
+    header {
+        flex-direction: column;
+        border: 10px;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        top: 0;
+        z-index: 100;
+        height: unset;
+        border-bottom: 2px solid #E14D2A;
+        background-color: aqua;
+
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+
+
+    }
+
+    .login {
+        display: none;
+    }
+
+    #abertura {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100vh;
+    
+    }
+    .primeira-parte {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
+
+    #imagem1-abertura {
+        padding-top: 4%;
+        height: auto;
+        width: 80vw;
+    }
+
+    .segunda-parte {
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        width: 100%;
+    
+    }
+
+
+    #frase-de-abertura {
+        padding: 2vh;
+        color: rgb(255, 255, 255);
+        font-size: clamp(0.4rem, 0.2vw + 1rem, 2.2rem);
+        text-align: center;
+        
+    }
+
+    #btn-app {
+        display: flex;
+        height: 5vh;
+        font-size: clamp(0.2rem, 0.09vw + 1rem, 2rem);
+    
+
+    }
+
+    #facilidades {
+        padding-top: 15%;
+        height: 100vh;
+        grid-template-columns: 33.33% 33.33% 33.33%;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "imag1 imag2 imag3" " imag4 . imag5" "texto-facilidades texto-facilidades texto-facilidades" "texto-facilidades texto-facilidades texto-facilidades";
+    }
+
+    .shape {
+        animation: transicao1 10s ease-in-out infinite;
+        border-radius: 100% 100% 100% 100% / 100% 100% 100% 100%;
+        height: 35vh;
+        width: 95vw;
+    }
+
+    @keyframes transicao1 {
+        0% {
+            border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
+            background: linear-gradient(45deg, var(--terceira) 50%, var(--quarta) 100%);
+        }
+
+        50% {
+            border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
+            background: linear-gradient(45deg, var(--primeira) 50%, var(--quarta) 100%);
+        }
+
+        100% {
+            border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
+            background: linear-gradient(45deg, var(--segunda) 50%, var(--terceira) 100%);
+        }
+    }
+
+    .tamanho-img {
+        width: 35%;
+        height: 50%;
+    }
+
+    #texto-facilidades {
+        text-align: center;
+        color: white;
+        font-size:0.9em;
+
+    }
+
+    #texto-facilidades p {
+        padding-bottom: 2%;
+
+
+    }
+
+    #frase-botao {
+        text-decoration: none;
+        border: 2px solid;
+        border-radius: 50px;
+        font-size: 0.8em;
+        color: white;
+        padding: 1px;
+
+    }
+
+    #frase-servicos {
+        /* align-self: flex-end; */
+        font-size: 1.5em;
+
+    }
+
+    #servicos {
+        display: grid;
+        align-items: center;
+        height: 90vh;
+        padding-top: 5%;
+        background-image: linear-gradient(to right, white, white, var(--primeira));
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "restaurante restaurante  mercado mercado farmacia farmacia "
+            " . lanches lanches pet-shop pet-shop . ";
+
+    }
+
+    #servicos figcaption {
+        align-self: flex-end;
+        font-size: 0.8em;
+
+    }
+
+    #servicos figure {
+        display: grid;
+        height: 25vh;
+        width: 26vw;
+        animation: transicao2 10s ease-in-out infinite;
+        border: 2px solid var(--primeira);
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        font-size: 1.2rem;
+        color: white;
+
+    }
+
+    @keyframes transicao2 {
+        0% {
+            border-radius: 100% 100% 100% 100% / 100% 100% 100% 100%;
+            background: linear-gradient(45deg, var(--terceira) 50%, var(--quarta) 100%);
+        }
+
+        50% {
+            border-radius: 100% 100% 100% 100% / 100% 100% 100% 100%;
+            background: linear-gradient(45deg, var(--primeira) 50%, var(--quarta) 100%);
+        }
+
+        100% {
+            border-radius: 100% 100% 100% 100% / 100% 100% 100% 100%;
+            background: linear-gradient(45deg, var(--segunda) 50%, var(--terceira) 100%);
+        }
+    }
+
+
+    #frase-promocoes {
+        text-align: center;
+        padding-top: 10%;
+        font-size: 1.5em;
+
+    }
+
+    #promocoes {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat (3, 1fr);
+        /* padding-top: 10%; */
+        height: 100vh;
+        text-align: center;
+        background-color: white;
+        grid-template-areas: "item1 item2 item3" "frase-oferta frase-oferta frase-oferta" "item4 item5 item6";
+     
+
+    }
+    #frase-oferta {
+        color: white;
+        font-size: 1.1rem;
+        padding-bottom: 5%;
+        display: flex;
+        align-items: center;
+        
+    }
+
+    .itens-promocao {
+        height: 18vh;
+        width: 18vw;
+    }
+
+
+    #frase-4food {
+        text-align: center;
+        align-items: center;
+        font-size: 1.3rem;
+        padding-top: 4%;
+        row-gap: 10%;
+        background-color: white;
+        color: #9C2C77;
+    }
+    #registre{
+        font-size: 1.2em;
+    }
+    #entregador{
+        font-size: 1.2em;
+    }
+    #trabalhe-conosco{
+        font-size: 1.2em;
+    }
+
+    #categorias {
+       
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "registre" "entregador" "trabalhe-conosco";
+
+    }
+
+   
+
+
+    .box {
+
+        padding: 15px;
+        border-radius: 15px;
+        width: 80%;
+        color: rgb(244, 236, 239);
+
+    }
+
+
+    footer {
+        display: flex;
+        background-color: white;
+        height: 25vh;
+        border-top: 2px solid #E14D2A;
+
+    }
+
+    #logo-footer img {
+        /*  */
+        justify-items: start;
+        width: 13vw;
+        height: 13vh;
+        /* display: none; */
+
+    }
+
+    #secao-footer a {
+        display: flex;
+        flex-direction: row;
+        text-decoration: none;
+        justify-content: center;
+        padding: 8px;
+        font-size: 1.2em;
+        color: #9C2C77;
+        flex-direction: row;
+    }
+
+    #secao-footer {
+        display: flex;
+        font-size: 1em;
+        flex-direction: column;
+
+    }
+
+    .redes-sociais img {
+        width: 6vw;
+        height: 6vh;
+
+    }
+
+
+    .redes-sociais {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+}
 

@@ -25,7 +25,7 @@ header {
     background-color: white;
     justify-content: space-around;
     align-items: center;
-    /* position: sticky; */
+    position: sticky;
     width: 100%;
     top: 0;
     z-index: 100;
@@ -198,7 +198,6 @@ nav a {
     align-content: center;
     text-align: center;
     flex-wrap: wrap;
-    align-items: center;
     font-size: 1.3rem;
     color: white;
     grid-area: texto-facilidades;
@@ -237,24 +236,33 @@ nav a {
 /* --------------------------------------------------------- */
 
 #frase-servicos {
+    display: grid;
     text-align: center;
     padding-top: 8%;
-    font-size: 2.5em;
+    font-size: 2.4em;
     color: #9C2C77;
-    background-image: linear-gradient(to right, white, white, var(--primeira));
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "frase-servicos";
+    background-image: linear-gradient(to right, var(--primeira), white, var(--primeira));
+    justify-items: center;
+    
+}
+
+#frase-servicos p {
+    display: grid;
+    font-size: 1.3rem;
+    width: 50%;
+    font-weight: 420;
+
 }
 
 #servicos {
+
+    height: 70vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(2, 1fr);
     justify-items: center;
-
     padding-top: 5%;
-    background-image: linear-gradient(to right, white, white, var(--primeira));
+    background-image: linear-gradient(to right, var(--primeira), white, var(--primeira));
     grid-template-areas: " restaurante mercado farmacia lanches pet-shop";
 
 }
@@ -265,7 +273,7 @@ nav a {
     width: 13vw;
     animation: transicao2 10s ease-in-out infinite;
     border: 2px solid var(--primeira);
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.50) 0px 14px 28px, rgba(0, 0, 0, 0.50) 0px 10px 10px;
     font-size: clamp(0.1rem, 0.5vw + 0.7rem, 1.4rem);
     color: white;
 
@@ -339,8 +347,9 @@ nav a {
     text-align: center;
     padding-top: 3%;
     padding-bottom: 3%;
-    font-size: 2.5em;
-    color: #FD841F;
+    font-size: 2.8em;
+    font-weight: 420;
+    color: #9C2C77;
     background-color: white;
     padding-top: 8%;
 
@@ -360,8 +369,8 @@ nav a {
 }
 
 .itens-promocao {
-    height: 25vh;
-    width: 13vw;
+    height: 24vh;
+    width: 11vw;
 }
 
 #item1 {
@@ -523,6 +532,7 @@ nav a {
     justify-content: center;
     background-color: white;
     padding-bottom: 2%;
+    background-image: linear-gradient(to right, var(--segunda), var(--terceira), var(--quarta));
 
 }
 
@@ -651,7 +661,7 @@ footer {
     width: 20vw;
 }
 
-/* -------------------------------------------TABLET------------------------------------------------- */
+/* --------------------------------TABLET-------------------------------------- */
 
 @media screen and (max-device-width : 800px) {
     #cor-de-fundo {
@@ -668,6 +678,7 @@ footer {
         z-index: 100;
         height: unset;
         border-bottom: 2px solid #E14D2A;
+        position:static;
 
     }
 
@@ -683,14 +694,10 @@ footer {
     }
 
     #abertura {
-        display: flex;
-        justify-content: space-between;
         height: 100vh;
-       flex-wrap:wrap-reverse;
+       
     }
-    .primeira-parte {
-        width: 25%;
-    }
+   
 
     #imagem1-abertura {
         padding-top: 15%;
@@ -698,14 +705,6 @@ footer {
         width: 58vw;
     }
 
-    .segunda-parte {
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        display: flex;
-        width: 50%;
-    
-    }
 
 
     #frase-de-abertura {
@@ -719,23 +718,22 @@ footer {
         display: flex;
         height: 5vh;
         font-size: clamp(0.2rem, 0.09vw + 1rem, 2rem);
-    
-
     }
 
     #facilidades {
+        background-image: linear-gradient(to right, var(--primeira), white, var(--primeira));
         padding-top: 15%;
         height: 100vh;
-        grid-template-columns: 33.33% 33.33% 33.33%;
-        grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-areas: "imag1 imag2 imag3" " imag4 . imag5" "texto-facilidades texto-facilidades texto-facilidades" "texto-facilidades texto-facilidades texto-facilidades";
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr ;
+        grid-template-areas: "imag1 imag2 imag3 imag4  imag5" "texto-facilidades texto-facilidades texto-facilidades" "texto-facilidades texto-facilidades texto-facilidades";
     }
 
     .shape {
         animation: transicao1 10s ease-in-out infinite;
         border-radius: 100% 100% 100% 100% / 100% 100% 100% 100%;
         height: 40vh;
-        width: 95vw;
+        width: 100vw;
     }
 
     @keyframes transicao1 {
@@ -767,6 +765,11 @@ footer {
 
     }
 
+    .tamanho-img {
+        width: 40%;
+        height: 60%;
+    }
+
     #frase-botao {
         text-decoration: none;
         border: 2px solid;
@@ -781,13 +784,19 @@ footer {
         align-self: flex-end;
 
     }
+    #frase-servicos p {
+        display: grid;
+        font-size: 1.3rem;
+        width: 70%;
+    
+    }
 
     #servicos {
         display: grid;
         align-items: center;
         height: 90vh;
         padding-top: 5%;
-        background-image: linear-gradient(to right, white, white, var(--primeira));
+        background-image: linear-gradient(to right, var(--primeira), white, var(--primeira));
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         grid-template-areas: "restaurante restaurante  mercado mercado farmacia farmacia "
@@ -833,7 +842,7 @@ footer {
     #frase-promocoes {
         text-align: center;
         padding-top: 10%;
-        font-size: 1.5em;
+        font-size: 1.7em;
 
     }
 
@@ -884,14 +893,19 @@ footer {
     }
 
    
-
+    #formulario{
+        background:white;
+      
+    }
 
     .box {
 
         padding: 15px;
         border-radius: 15px;
-        width: 80%;
+        width: 60%;
         color: rgb(244, 236, 239);
+       
+        
 
     }
 
@@ -905,11 +919,10 @@ footer {
     }
 
     #logo-footer img {
-        /*  */
+     
         justify-items: start;
         width: 13vw;
         height: 13vh;
-        /* display: none; */
 
     }
 
@@ -932,8 +945,8 @@ footer {
     }
 
     .redes-sociais img {
-        width: 6vw;
-        height: 6vh;
+        width: 5vw;
+        height: 5vh;
 
     }
 
@@ -947,7 +960,7 @@ footer {
 
 }
 
-/* CELULARES  */
+/* ----------------------CELULARES----------------------------  */
 
 @media screen and (max-device-width : 480px) {
     #cor-de-fundo {
@@ -1006,38 +1019,27 @@ footer {
     }
 
 
-    #frase-de-abertura {
-        padding: 2vh;
-        color: rgb(255, 255, 255);
-        font-size: clamp(0.4rem, 0.2vw + 1rem, 2.2rem);
-        text-align: center;
-        
-    }
-
-    #btn-app {
-        display: flex;
-        height: 5vh;
-        font-size: clamp(0.2rem, 0.09vw + 1rem, 2rem);
-    
-
-    }
-
     #facilidades {
         padding-top: 15%;
         height: 100vh;
-        grid-template-columns: 33.33% 33.33% 33.33%;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
-        grid-template-areas: "imag1 imag2 imag3" " imag4 . imag5" "texto-facilidades texto-facilidades texto-facilidades" "texto-facilidades texto-facilidades texto-facilidades";
+        grid-template-areas: "imag1 imag2 imag3 imag4  imag5" "texto-facilidades texto-facilidades texto-facilidades" "texto-facilidades texto-facilidades texto-facilidades";
     }
 
-    .shape {
+    .tamanho-img {
+        width: 60%;
+        height: 44%;
+    }
+
+    /* .shape {
         animation: transicao1 10s ease-in-out infinite;
         border-radius: 100% 100% 100% 100% / 100% 100% 100% 100%;
         height: 35vh;
         width: 95vw;
-    }
+    } */
 
-    @keyframes transicao1 {
+    /* @keyframes transicao1 {
         0% {
             border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
             background: linear-gradient(45deg, var(--terceira) 50%, var(--quarta) 100%);
@@ -1052,12 +1054,9 @@ footer {
             border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
             background: linear-gradient(45deg, var(--segunda) 50%, var(--terceira) 100%);
         }
-    }
+    } */
 
-    .tamanho-img {
-        width: 35%;
-        height: 50%;
-    }
+
 
     #texto-facilidades {
         text-align: center;
@@ -1067,18 +1066,19 @@ footer {
     }
 
     #texto-facilidades p {
-        padding-bottom: 2%;
+        padding-left: 1%;
+        padding-right: 1%;
 
 
     }
 
     #frase-botao {
-        text-decoration: none;
-        border: 2px solid;
-        border-radius: 50px;
-        font-size: 0.8em;
-        color: white;
-        padding: 1px;
+        /* text-decoration: none; */
+        /* border: 2px solid; */
+        /* border-radius: 50px; */
+        font-size: 0.9em;
+        /* color: white; */
+        /* padding: 1px; */
 
     }
 
@@ -1088,7 +1088,14 @@ footer {
 
     }
 
-    #servicos {
+    #frase-servicos p {
+        /* display: grid; */
+        font-size: 1.2rem;
+        width: 95%;
+    
+    }
+
+    /* #servicos {
         display: grid;
         align-items: center;
         height: 90vh;
@@ -1099,27 +1106,27 @@ footer {
         grid-template-areas: "restaurante restaurante  mercado mercado farmacia farmacia "
             " . lanches lanches pet-shop pet-shop . ";
 
-    }
+    } */
 
     #servicos figcaption {
         align-self: flex-end;
-        font-size: 0.8em;
+        font-size: 0.7em;
 
     }
 
     #servicos figure {
-        display: grid;
+        /* display: grid; */
         height: 25vh;
-        width: 26vw;
-        animation: transicao2 10s ease-in-out infinite;
-        border: 2px solid var(--primeira);
-        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-        font-size: 1.2rem;
+        width: 29vw;
+        /* animation: transicao2 10s ease-in-out infinite; */
+        /* border: 2px solid var(--primeira); */
+        /* box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; */
+        /* font-size: 1.2rem; */
         color: white;
 
     }
 
-    @keyframes transicao2 {
+    /* @keyframes transicao2 {
         0% {
             border-radius: 100% 100% 100% 100% / 100% 100% 100% 100%;
             background: linear-gradient(45deg, var(--terceira) 50%, var(--quarta) 100%);
@@ -1134,15 +1141,15 @@ footer {
             border-radius: 100% 100% 100% 100% / 100% 100% 100% 100%;
             background: linear-gradient(45deg, var(--segunda) 50%, var(--terceira) 100%);
         }
-    }
+    } */
 
 
-    #frase-promocoes {
+    /* #frase-promocoes {
         text-align: center;
         padding-top: 10%;
         font-size: 1.5em;
 
-    }
+    } */
 
     #promocoes {
         display: grid;
@@ -1220,11 +1227,9 @@ footer {
     }
 
     #logo-footer img {
-        /*  */
         justify-items: start;
         width: 13vw;
         height: 13vh;
-        /* display: none; */
 
     }
 
@@ -1248,7 +1253,7 @@ footer {
 
     .redes-sociais img {
         width: 6vw;
-        height: 6vh;
+        height: 5vh;
 
     }
 

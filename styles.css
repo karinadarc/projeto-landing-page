@@ -31,12 +31,11 @@ header {
     z-index: 100;
     height: 15vh;
     border-bottom: 2px solid #E14D2A;
-
 }
-
 
 #logo-cabecalho {
     height: 14vh;
+    cursor: pointer;
 }
 
 #menu {
@@ -45,24 +44,29 @@ header {
 
 nav a {
     padding: 1vh;
-    font-size: 20px;
+    font-size: 1.2rem;
     text-decoration: none;
     color: var(--quarta);
     font-weight: 500;
-
-
 }
 
-.login {
-    height: 15px;
+#hamburguer {
+    display: none;
 }
 
 
+#btn-login {
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: #E14D2A;
+    border-radius: 20px;
+}
 
 #abertura {
     display: flex;
     justify-content: space-between;
     height: 90vh;
+    scroll-margin-top: 15vh;
 }
 
 .primeira-parte {
@@ -86,7 +90,7 @@ nav a {
 
 #frase-de-abertura {
     padding: 2vh;
-    color: rgb(255, 255, 255);
+    color:white;
     font-size: clamp(0.5rem, 0.8vw + 1rem, 2.2rem);
     text-align: center;
 }
@@ -122,14 +126,12 @@ nav a {
 }
 
 
-/* ================================================= */
-
 
 .shape {
     background: linear-gradient(45deg, var(--terceira) 100%, var(--segunda) 100% var(--primeira) 80% var(--quarta) 90%);
     animation: transicao1 10s ease-in-out infinite;
     border-radius: 100% 100% 100% 100% / 100% 100% 100% 100%;
-    /* height: 58vh; */
+    height: 60vh;
     width: 70vw;
     z-index: 5;
 
@@ -174,10 +176,16 @@ nav a {
 
 
 #frase-botao {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
     text-decoration: none;
     border: 2px solid;
     border-radius: 50px;
-    font-size: 17px;
+    font-size: 1.3rem;
+    width: 72%;
     color: white;
     padding: 1px;
 
@@ -210,7 +218,7 @@ nav a {
 
 .tamanho-img {
     width: 35%;
-    height: 60%;
+    height: 55%;
 }
 
 #imag1 {
@@ -233,7 +241,6 @@ nav a {
     grid-area: imag5;
 }
 
-/* --------------------------------------------------------- */
 
 #frase-servicos {
     display: grid;
@@ -243,7 +250,7 @@ nav a {
     color: #9C2C77;
     background-image: linear-gradient(to right, var(--primeira), white, var(--primeira));
     justify-items: center;
-    
+
 }
 
 #frase-servicos p {
@@ -276,7 +283,6 @@ nav a {
     box-shadow: rgba(0, 0, 0, 0.50) 0px 14px 28px, rgba(0, 0, 0, 0.50) 0px 10px 10px;
     font-size: clamp(0.1rem, 0.5vw + 0.7rem, 1.4rem);
     color: white;
-
 
 }
 
@@ -341,7 +347,6 @@ nav a {
     grid-area: pet-shop;
 }
 
-/* ---------------------------------------------------------- */
 
 #frase-promocoes {
     text-align: center;
@@ -379,8 +384,6 @@ nav a {
     font-size: 1.5rem;
     color: #CD104D;
     grid-area: item1;
-
-
 }
 
 #item2 {
@@ -389,8 +392,6 @@ nav a {
     font-size: 1.5rem;
     color: #CD104D;
     grid-area: item2;
-
-
 }
 
 #item3 {
@@ -399,7 +400,6 @@ nav a {
     font-size: 1.5rem;
     color: #CD104D;
     grid-area: item3;
-
 }
 
 
@@ -409,8 +409,6 @@ nav a {
     font-size: 1.5rem;
     color: #CD104D;
     grid-area: item4;
-
-
 }
 
 #item5 {
@@ -419,8 +417,6 @@ nav a {
     font-size: 1.5rem;
     color: #CD104D;
     grid-area: item5;
-
-
 }
 
 #item6 {
@@ -429,8 +425,6 @@ nav a {
     font-size: 1.5rem;
     color: #CD104D;
     grid-area: item6;
-
-
 }
 
 
@@ -462,7 +456,6 @@ nav a {
     }
 }
 
-/* ===================================== */
 
 #frase-4food {
     text-align: center;
@@ -488,8 +481,8 @@ nav a {
 }
 
 .categoria-img {
-    height: 35vh;
-    width: 35vh;
+    height: 27vw;
+    width: 27vw;
     border-radius: 50%;
     text-align: center;
     align-items: center;
@@ -498,7 +491,7 @@ nav a {
 
 
 #registre {
-    font-size: 25px;
+    font-size: 1.5em;
     text-align: center;
     align-items: center;
     color: #CD104D;
@@ -507,7 +500,7 @@ nav a {
 
 
 #entregador {
-    font-size: 25px;
+    font-size: 1.5em;
     text-align: center;
     align-items: center;
     color: #CD104D;
@@ -516,15 +509,13 @@ nav a {
 
 
 #trabalhe-conosco {
-    font-size: 25px;
+    font-size: 1.5em;
     text-align: center;
     align-items: center;
     color: #CD104D;
     grid-area: trabalhe-conosco;
 }
 
-
-/* --------------------------------------------- */
 
 #formulario {
     font-family: Arial, Helvetica, sans-serif;
@@ -616,8 +607,6 @@ legend {
 
 }
 
-/* --------------------------------------------------------------------------------------------- */
-
 footer {
     display: flex;
     align-items: center;
@@ -634,7 +623,9 @@ footer {
     flex-direction: row;
     width: 14vh;
     height: 14vh;
+    cursor: pointer;
 }
+
 
 #secao-footer a {
     text-decoration: none;
@@ -651,8 +642,6 @@ footer {
 .redes-sociais img {
     width: 5vh;
     height: 5vh;
-
-
 }
 
 .redes-sociais {
@@ -661,7 +650,9 @@ footer {
     width: 20vw;
 }
 
-/* --------------------------------TABLET-------------------------------------- */
+
+
+/* --------------------------------TABLET------------------------ */
 
 @media screen and (max-device-width : 800px) {
     #cor-de-fundo {
@@ -678,14 +669,28 @@ footer {
         z-index: 100;
         height: unset;
         border-bottom: 2px solid #E14D2A;
-        position:static;
 
     }
+
+    #hamburguer {
+        width: 5vw;
+        height: 5vh;
+        display: unset;
+    }
+
+
+
+    #controle-menu {
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
 
     nav {
         display: flex;
         flex-direction: column;
-
 
     }
 
@@ -695,9 +700,9 @@ footer {
 
     #abertura {
         height: 100vh;
-       
+        scroll-margin-top: 10vh;
     }
-   
+
 
     #imagem1-abertura {
         padding-top: 15%;
@@ -721,18 +726,21 @@ footer {
     }
 
     #facilidades {
+        scroll-margin-top: 10vh;
         background-image: linear-gradient(to right, var(--primeira), white, var(--primeira));
         padding-top: 15%;
         height: 100vh;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr ;
-        grid-template-areas: "imag1 imag2 imag3 imag4  imag5" "texto-facilidades texto-facilidades texto-facilidades" "texto-facilidades texto-facilidades texto-facilidades";
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: "imag1 imag2 imag3 imag4  imag5" "texto-facilidades texto-facilidades texto-facilidades texto-facilidades texto-facilidades"
+            "texto-facilidades texto-facilidades texto-facilidades texto-facilidades texto-facilidades"
+            "texto-facilidades texto-facilidades texto-facilidades texto-facilidades texto-facilidades";
     }
 
     .shape {
         animation: transicao1 10s ease-in-out infinite;
         border-radius: 100% 100% 100% 100% / 100% 100% 100% 100%;
-        height: 40vh;
+        height: 60vh;
         width: 100vw;
     }
 
@@ -781,14 +789,16 @@ footer {
     }
 
     #frase-servicos {
+        scroll-margin-top: 10vh;
         align-self: flex-end;
 
     }
+
     #frase-servicos p {
         display: grid;
         font-size: 1.3rem;
         width: 70%;
-    
+
     }
 
     #servicos {
@@ -806,7 +816,6 @@ footer {
 
     #servicos figcaption {
         align-self: flex-end;
-
     }
 
     #servicos figure {
@@ -840,6 +849,7 @@ footer {
 
 
     #frase-promocoes {
+        scroll-margin-top: 10vh;
         text-align: center;
         padding-top: 10%;
         font-size: 1.7em;
@@ -860,6 +870,7 @@ footer {
         grid-template-areas: "item1 item2 item3" "frase-oferta frase-oferta frase-oferta" "item4 item5 item6";
 
     }
+
     #frase-oferta {
         color: white;
         text-align: center;
@@ -877,7 +888,7 @@ footer {
     #frase-4food {
         text-align: center;
         align-items: center;
-        font-size: 1.2rem;
+        font-size: 1.7rem;
         padding-top: 4%;
         row-gap: 10%;
         background-color: white;
@@ -885,17 +896,19 @@ footer {
     }
 
     #categorias {
-       
+
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas: "registre" "entregador" "trabalhe-conosco";
-
     }
 
-   
-    #formulario{
-        background:white;
-      
+    .categoria-img {
+        height: 40vw;
+        width: 40vw;
+    }
+
+    #formulario {
+        background: white;
     }
 
     .box {
@@ -904,9 +917,6 @@ footer {
         border-radius: 15px;
         width: 60%;
         color: rgb(244, 236, 239);
-       
-        
-
     }
 
 
@@ -915,15 +925,13 @@ footer {
         background-color: white;
         height: 25vh;
         border-top: 2px solid #E14D2A;
-
     }
 
     #logo-footer img {
-     
+
         justify-items: start;
         width: 13vw;
         height: 13vh;
-
     }
 
     #secao-footer a {
@@ -941,13 +949,11 @@ footer {
         display: flex;
         font-size: 1em;
         flex-direction: column;
-
     }
 
     .redes-sociais img {
         width: 5vw;
         height: 5vh;
-
     }
 
 
@@ -957,6 +963,10 @@ footer {
         align-items: center;
     }
 
+
+    .invisivel {
+        display: none !important;
+    }
 
 }
 
@@ -977,15 +987,11 @@ footer {
         z-index: 100;
         height: unset;
         border-bottom: 2px solid #E14D2A;
-        background-color: aqua;
-
     }
 
     nav {
         display: flex;
         flex-direction: column;
-
-
     }
 
     .login {
@@ -996,8 +1002,8 @@ footer {
         display: flex;
         flex-wrap: wrap;
         height: 100vh;
-    
     }
+
     .primeira-parte {
         display: flex;
         width: 100%;
@@ -1015,7 +1021,6 @@ footer {
         align-items: center;
         display: flex;
         width: 100%;
-    
     }
 
 
@@ -1032,144 +1037,60 @@ footer {
         height: 44%;
     }
 
-    /* .shape {
-        animation: transicao1 10s ease-in-out infinite;
-        border-radius: 100% 100% 100% 100% / 100% 100% 100% 100%;
-        height: 35vh;
-        width: 95vw;
-    } */
-
-    /* @keyframes transicao1 {
-        0% {
-            border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
-            background: linear-gradient(45deg, var(--terceira) 50%, var(--quarta) 100%);
-        }
-
-        50% {
-            border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
-            background: linear-gradient(45deg, var(--primeira) 50%, var(--quarta) 100%);
-        }
-
-        100% {
-            border-radius: 0% 0% 0% 0% / 0% 0% 0% 0%;
-            background: linear-gradient(45deg, var(--segunda) 50%, var(--terceira) 100%);
-        }
-    } */
-
 
 
     #texto-facilidades {
         text-align: center;
         color: white;
-        font-size:0.9em;
-
+        font-size: 0.9em;
     }
 
     #texto-facilidades p {
         padding-left: 1%;
         padding-right: 1%;
-
-
     }
 
     #frase-botao {
-        /* text-decoration: none; */
-        /* border: 2px solid; */
-        /* border-radius: 50px; */
         font-size: 0.9em;
-        /* color: white; */
-        /* padding: 1px; */
-
     }
 
     #frase-servicos {
-        /* align-self: flex-end; */
         font-size: 1.5em;
-
     }
 
     #frase-servicos p {
-        /* display: grid; */
         font-size: 1.2rem;
         width: 95%;
-    
     }
 
-    /* #servicos {
-        display: grid;
-        align-items: center;
-        height: 90vh;
-        padding-top: 5%;
-        background-image: linear-gradient(to right, white, white, var(--primeira));
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        grid-template-areas: "restaurante restaurante  mercado mercado farmacia farmacia "
-            " . lanches lanches pet-shop pet-shop . ";
-
-    } */
 
     #servicos figcaption {
         align-self: flex-end;
         font-size: 0.7em;
-
     }
 
     #servicos figure {
-        /* display: grid; */
         height: 25vh;
         width: 29vw;
-        /* animation: transicao2 10s ease-in-out infinite; */
-        /* border: 2px solid var(--primeira); */
-        /* box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px; */
-        /* font-size: 1.2rem; */
         color: white;
-
     }
-
-    /* @keyframes transicao2 {
-        0% {
-            border-radius: 100% 100% 100% 100% / 100% 100% 100% 100%;
-            background: linear-gradient(45deg, var(--terceira) 50%, var(--quarta) 100%);
-        }
-
-        50% {
-            border-radius: 100% 100% 100% 100% / 100% 100% 100% 100%;
-            background: linear-gradient(45deg, var(--primeira) 50%, var(--quarta) 100%);
-        }
-
-        100% {
-            border-radius: 100% 100% 100% 100% / 100% 100% 100% 100%;
-            background: linear-gradient(45deg, var(--segunda) 50%, var(--terceira) 100%);
-        }
-    } */
-
-
-    /* #frase-promocoes {
-        text-align: center;
-        padding-top: 10%;
-        font-size: 1.5em;
-
-    } */
 
     #promocoes {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: repeat (3, 1fr);
-        /* padding-top: 10%; */
         height: 100vh;
         text-align: center;
         background-color: white;
         grid-template-areas: "item1 item2 item3" "frase-oferta frase-oferta frase-oferta" "item4 item5 item6";
-     
-
     }
+
     #frase-oferta {
         color: white;
         font-size: 1.1rem;
         padding-bottom: 5%;
         display: flex;
         align-items: center;
-        
     }
 
     .itens-promocao {
@@ -1187,34 +1108,36 @@ footer {
         background-color: white;
         color: #9C2C77;
     }
-    #registre{
+
+    #registre {
         font-size: 1.2em;
     }
-    #entregador{
+
+    #entregador {
         font-size: 1.2em;
     }
-    #trabalhe-conosco{
+
+    #trabalhe-conosco {
         font-size: 1.2em;
     }
 
     #categorias {
-       
+
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas: "registre" "entregador" "trabalhe-conosco";
-
     }
 
-   
-
+    .categoria-img {
+        height: 50vw;
+        width: 50vw;
+    }
 
     .box {
-
         padding: 15px;
         border-radius: 15px;
         width: 80%;
         color: rgb(244, 236, 239);
-
     }
 
 
@@ -1223,14 +1146,12 @@ footer {
         background-color: white;
         height: 25vh;
         border-top: 2px solid #E14D2A;
-
     }
 
     #logo-footer img {
         justify-items: start;
         width: 13vw;
         height: 13vh;
-
     }
 
     #secao-footer a {
@@ -1248,13 +1169,12 @@ footer {
         display: flex;
         font-size: 1em;
         flex-direction: column;
-
+        text-align: center;
     }
 
     .redes-sociais img {
         width: 6vw;
         height: 5vh;
-
     }
 
 
@@ -1266,4 +1186,3 @@ footer {
 
 
 }
-

@@ -6,23 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
     <title>4Food</title>
 </head>
 
 <body>
     <div id="cor-de-fundo">
         <header>
-            <img id="logo-cabecalho" src="./icones/logo-com-escrita.png" alt="logotipo 4FOOD">
-            <nav id="menu">
-                <a href="#abertura">Sobre</a>
-                <a href="#facilidades">Seja 4Food</a>
-                <a href="#frase-servicos">Serviços</a>
-                <a href="#frase-promocoes">Promoções</a>
-                <a href="#frase-4food">Trabalhe conosco</a>
-                
+            <div id="controle-menu">
+                <img id="logo-cabecalho" src="./icones/logo-com-escrita.png" alt="logotipo 4FOOD"
+                    onclick="document.documentElement.scrollTop=0">
+
+                <img id="hamburguer" src="./icones/menu-hamburguer.png " alt="icone hamburguer">
+            </div>
+
+            <nav class="invisivel hamburguer-menu" id="menu">
+                <a onclick="fechaClick()" href="#abertura">Quem somos</a>
+                <a onclick="fechaClick()" href="#facilidades">Seja 4Food</a>
+                <a onclick="fechaClick()" href="#frase-servicos">Serviços</a>
+                <a onclick="fechaClick()" href="#frase-promocoes">Promoções</a>
+                <a onclick="fechaClick()" href="#formulario">Contato</a>
+
             </nav>
-            <nav>
-                <a href="">Criar conta/entrar </a> <img class="login" src="./icones/usuario.png" alt="ícone usuario">
+            <nav class="invisivel hamburguer-menu">
+                <a id="btn-login">Criar conta/ entrar </a>
 
 
             </nav>
@@ -33,17 +40,16 @@
 
                 <section class="primeira-parte">
                     <img id="imagem1-abertura" src="./icones/entregador-segunda-foto.png"
-                    alt="imagem de um homem segurando uma caixa de verduras">
-                </section> 
+                        alt="imagem de um homem segurando uma caixa de verduras">
+                </section>
 
 
 
                 <section class="segunda-parte">
-                    <p id="frase-de-abertura">Bem-vindo ao 4 Food, o seu supermercado digital! Aqui, você encontra uma
-                        ampla variedade de
-                        produtos alimentícios, limpeza, saúde e até para o seu pet. Nós nos orgulhamos em oferecer
-                        produtos de alta qualidade com preços competitivos e um atendimento excepcional. Faça suas
-                        compras conosco e aproveite a praticidade de ser 4Food. </p>
+                    <p id="frase-de-abertura">Seja bem-vindo ao 4 Food, o seu supermercado digital! Aqui você encontra
+                        uma ampla variedade de produtos alimentícios, de limpeza, saúde e até para o seu pet. Nós nos
+                        orgulhamos em oferecer produtos de alta qualidade com preços competitivos e um atendimento
+                        excepcional. Faça suas compras conosco e aproveite a praticidade de ser 4Food </p>
 
 
                     <a id="btn-app"
@@ -55,8 +61,8 @@
 
                 </section>
 
-                
-                
+
+
 
 
             </section>
@@ -71,10 +77,11 @@
                     alt="imagem de entrega de pacote">
 
                 <div class="shape" id="texto-facilidades">
-                    <p>Navegue pelo nosso mercado virtual e encontre tudo o que precisa, desde frutas e verduras até
-                        carnes, peixes e produtos de limpeza. Com o nosso sistema de entrega rápida e confiável, você
-                        pode receber seus produtos diretamente na porta de casa ou onde estiver, economizando tempo e
-                        energia.
+                    <p>
+                        Oferecemos uma grande variedade de produtos, desde frutas e verduras até carnes e produtos de
+                        limpeza. Entregamos com segurança, diretamente em sua casa ou onde estiver. Temos uma seção
+                        dedicada aos animais de estimação, com rações, brinquedos e acessórios. Com preços justos e um
+                        atendimento excepcional, estamos prontos para te atender.
                     </p>
 
 
@@ -89,11 +96,14 @@
 
             <section id="frase-servicos">
                 <h3>
-                    Confira nossa lista de serviços 
+                    Confira nossos serviços
                 </h3>
                 <p>
-                    A 4food é uma empresa que oferece uma ampla variedade de serviços para atender às suas necessidades. Com a nossa experiência e compromisso em fornecer produtos de qualidade, temos o prazer de apresentar nossos serviços.
-                </p></section>
+                    A 4food é uma empresa que oferece uma ampla variedade de serviços para atender às suas necessidades.
+                    Com a nossa experiência e compromisso em fornecer produtos de qualidade, temos o prazer de
+                    apresentar nossos serviços.
+                </p>
+            </section>
 
             <section id="servicos">
 
@@ -173,7 +183,7 @@
             </section>
             <section id="frase-4food">
                 <h3>Junte-se ao 4Food</h3>
-                <p>Seja um do nosssos colaboradores, preencha o formulário que entraremos em contato!</p>
+                <p>Seja um do nosssos colaboradores, preencha nosso formulário!</p>
                 <br>
             </section>
 
@@ -200,12 +210,12 @@
             <section id="formulario">
 
                 <div class="box">
-                    <form action="">
+                    <form novalidate id="info-formulario">
                         <fieldset>
                             <legend><b>Formulário</b></legend>
                             <br>
                             <div class="inputBox">
-                                <input type="text" name="nome" id="none" class="inputUser" required>
+                                <input type="text" name="nome" id="nome" class="inputUser" required>
                                 <label for="nome" class="labelInput">Nome Completo</label>
                             </div>
                             <br>
@@ -224,9 +234,9 @@
                             <br><br>
 
 
-                            <label for="categoria-select">Selecione uma das seções</label>
+                            <label for="categoria-select">Selecione uma das opções</label>
                             <br>
-                            <select name="opcoes" id="categoria-select">
+                            <select name="opcoes" id="categoria-select" required>
                                 <option value="">--escolha uma das opções--</option>
                                 <option value="negocios">Registrar meu negócio</option>
                                 <option value="entregador">Entregador(a)</option>
@@ -250,13 +260,14 @@
 
     <footer>
         <div id="logo-footer">
-            <img src="./icones/logo-sem-escrita.png" alt="logotipo 4FOOD">
+            <img src="./icones/logo-sem-escrita.png" alt="logotipo 4FOOD"
+                onclick="document.documentElement.scrollTop=0">
         </div>
         <div id="secao-footer">
-          
-            <a href="#frase-servicos">Nossos Serviços</a>
-            <a href="#facilidades">4Food Card </a>
+
             <a>Contato: 0800 000 000</a>
+            <a>Alameda dos flamingos - Contagem/MG</a>
+
         </div>
         <div class="redes-sociais">
             <a href="https://web.whatsapp.com/" target="_blank"><img src="./icones/whatsapp (1).png"
@@ -267,7 +278,7 @@
                     alt="Logotipo Twitter"></a>
         </div>
     </footer>
-    </div>
+
 </body>
 
 </html>

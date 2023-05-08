@@ -130,3 +130,38 @@ A sua Landing Page deve conter:
 4.  Abra um novo Pull Request (PR) com a frase **PR para correção**. Caso não saiba como fazê-lo, assista a esse [vídeo](https://www.canva.com/design/DAFY4nS5W2c/t92uFMR61YtmA7bCwj2S1Q/watch).
 5.  Envie o link do seu PR e do surge no [formulário de entrega](https://forms.gle/nrh5KpDhAMwXBjC29).
 
+
+## Link do deploy:  
+4food-karina.surge.sh
+
+
+![desktop1](./print/desktop/1.png)
+![desktop2](./print/desktop/2.png)
+![desktop3](./print/desktop/3.png)
+![desktop4](./print/desktop/4.png)
+![desktop5](./print/desktop/5.png)
+![desktop6](./print/desktop/6.png)
+
+![tablet0](./print/tablet/0.png)
+![tablet1](./print/tablet/1.png)
+![tablet2](./print/tablet/2.png)
+![tablet3.1](./print/tablet/3.1.png)
+![tablet3.2](./print/tablet/3.2.png)
+![tablet4.1](./print/tablet/4.1.png)
+![tablet4.2](./print/tablet/4.2.png)
+![tablet5.1](./print/tablet/5.1.png)
+![tablet5.2](./print/tablet/5.2.png)
+![tablet6](./print/tablet/6.png)
+
+![celulares](./print/celular/0.png)
+![celulares](./print/celular/1.png)
+![celulares](./print/celular/2.png)
+![celulares](./print/celular/3.png)
+![celulares](./print/celular/3.1.png)
+![celulares](./print/celular/4.png)
+![celulares](./print/celular/4.1.png)
+![celulares](./print/celular/5.png)
+![celulares](./print/celular/5.1.png)
+![celulares](./print/celular/6.png)
+![celulares](./print/celular/7.png)
+
